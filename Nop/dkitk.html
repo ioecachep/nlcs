@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			.center
+				{
+					margin:0 auto;
+					width:900px;
+				}
+		</style>
+		
+		<meta charset="utf8">
+		<script src="dkitk.js"></script>
+	</head>
+	<body>
+	<div class="center">
+	<form action ="xulidki.php" onsubmit="return ktdangki()"  method="post" name="X" enctype="multipart/form-data" >
+			<table style="background-color:gainsboro">	
+					<tr>
+						<th colspan="2"><h3 style="color:red"> Dang ki tai khoan moi </h3></th>
+					</tr>
+					
+					<tr>
+						<th colspan="2"><h4> Vui long dien day du thong tin ben duoi de dang ki tai khoan moi</h4></th>
+						
+					</tr>
+					
+					<tr>
+						<td> Tên đăng nhập </td>
+						<td><input type="text" name="tendangnhap" id="name" onchange = "kt(this.value)"></td>
+					</tr>
+					
+					<tr>
+						<td colspan=2 id="p1"></td>
+					</tr>
+					<tr>
+						<td> Mật Khẩu </td>
+						<td><input type="password" name="matkhau" id="pass"></td>
+					</tr>
+					
+					<tr>
+						<td colspan=2 id="p2"></td>
+					</tr>
+					<tr>
+						<td> Gõ lại mật khẩu </td>
+						<td><input type="password" name="golaimatkhau" id="repass"></td>
+					</tr>
+					
+					<tr>
+						<td colspan=2 id="p3"></td>
+					</tr>
+					<tr>
+						<td> Quyền truy cập </td>
+						<td> 
+							<select name = "quyen">
+								<option value="admin" name="admin"> Admin </option>
+								<option value="nhân viên" name ="nhanvien"> Nhân viên </option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td> </td>
+						<td> 
+							<input type="submit" value="Dang ki" onclick="ktdangki">
+							<input type="reset" value="Lam lai">
+						</td>
+					</tr>
+				
+			</table>
+		</form>
+	</div>
+	</body>
+</<html>

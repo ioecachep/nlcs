@@ -1,0 +1,13 @@
+body {
+	margin:0 auto;
+	width:900px;
+    background-image: url("./image/hinhnen3.jpg");
+    background-repeat: no-repeat;
+}
+td{
+	padding: 5px;
+}
+img {
+	height:500px;
+	width: 100px;
+}

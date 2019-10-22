@@ -1,0 +1,128 @@
+* {
+    padding: 0px;
+    margin: 0 auto;
+    font-family: Courier New;
+}
+#wrap{
+    background: red;
+}
+/* Menu */
+div#menu{
+    width: 10%;
+    height: 9999px;
+    position: fixed;
+    padding: 10px 50px 10px 50px;
+    border-right: 15px solid #e8e8e8;
+}
+#menu {
+    display: table;
+    float: left;
+    text-align: center;
+    background: #00FF99;
+}
+#menu ul {
+    width: 200px;
+    padding: 0;
+    list-style-type: none;
+}
+#menu li {
+    padding: 0;
+    margin: 0 auto;
+    background: #004800;
+    width: auto;
+/*    height: 120px;*/
+    line-height: 40px;
+    border-bottom: 1px solid #e8e8e8;
+    border: 1px solid lightseagreen;
+   }
+#menu ul :hover{
+    background: gold;
+}
+li#selected{
+    background: gainsboro;
+}
+#thanbai{
+    width: 83.5%;
+    float: right;
+}
+div#header{
+    background-image: url("./img/header.jpg");
+    background-position: center;
+    text-align: center;
+    padding: 50px;
+}
+#header{
+    color: white;
+}
+/* Content */
+#content{
+    padding: 10px;
+    height: 752px;
+    background: #66FFCC	;
+    overflow: auto;
+}
+/* Bên trong content */
+#chucnang {
+    position: fixed;
+    float: left;
+    width: 250px;
+}
+#chucnang ul {
+    background: #8AD385;
+    width: 250px;
+    padding: 0;
+    list-style-type: none;
+    text-align: center;
+  }
+#chucnang li {
+    width: auto;
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid #e8e8e8;
+}
+#chucnang li:hover {
+    background: #CDE2CD;
+}
+#chucnang li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    display: block;
+   }
+#chucnang ul li ul{
+    width: 200px;
+    background: red;
+    position: absolute;     
+    top: 0px;         
+    right: -201px;     
+    display: none;    
+}
+#chucnang ul li:hover ul{
+    display: block;
+}
+#ajax{
+ float: right;
+ width: 80%;
+}
+/* Footer */
+#footer{
+    text-align: center;
+}
+/* table
+table {
+    padding: 10px;
+}
+td {
+    width: 250px;
+    padding: 10px;
+    border: 1px solid lightseagreen;
+    border-radius: 10px;
+}
+td:hover {
+    background: lightcoral;
+}*/
+/* a link */
+a {
+    color: black;    
+    text-decoration: none;
+}

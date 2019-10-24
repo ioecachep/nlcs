@@ -28,8 +28,7 @@
 <body>
     <div id="SP">
     <?php
-            $con = new mysqli("localhost","root","","nlcs");
-            $con->set_charset("utf8");
+            include 'connect.php';
             $sql = "SELECT mahang,tenhang,giamua,giaban,soluong,hinhanh,tenloai FROM hanghoa, loai WHERE hanghoa.maloai=loai.maloai;";
             $result = $con->query($sql);
             if ($result->num_rows > 0){

@@ -16,8 +16,7 @@
     $maloai=$_POST['maloai'];
     $hinhanh="./img/sanpham/" . $_FILES['hinhanh']['name'];
 	move_uploaded_file($_FILES['hinhanh']['tmp_name'],$hinhanh);
-    $con = new mysqli("localhost","root","","nlcs");
-	$con->set_charset("utf8");
+    include 'connect.php';
     $sql = "INSERT INTO hanghoa(mahang,tenhang,giamua,giaban,soluong,hinhanh,maloai) VALUES ('$mahang','$tenhang','$giamua','$giaban','$soluong','$hinhanh','$maloai')";
 	$result = $con->query($sql);
     if ($result == 1){

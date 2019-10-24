@@ -31,8 +31,7 @@
                         <li><a href="#">Loại Hàng Hóa</a>
                             <ul>
                                 <?php
-                                    $con = new mysqli("localhost","root","","nlcs");
-                                    $con->set_charset("utf8");
+                                    include 'connect.php';
                                     $sql = "SELECT * FROM loai";
                                     $result = $con->query($sql);
                                     if ($result->num_rows > 0){

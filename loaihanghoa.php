@@ -29,8 +29,7 @@
     <div id="SP">
     <?php
             $maloai = $_GET['loai'];
-            $con = new mysqli("localhost","root","","nlcs");
-            $con->set_charset("utf8");
+            include 'connect.php';
             $sql = "select * from loai,hanghoa where loai.maloai=hanghoa.maloai and loai.tenloai='".$maloai."'";
             $result = $con->query($sql);
             if ($result->num_rows > 0){

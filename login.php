@@ -12,7 +12,7 @@
 </head>
 <body>
     <div class="form">
-        <h1>Login System</h1>
+        <h1>Login System - Shop Project</h1>
         <form action="">
             <input type="text" placeholder="Tài Khoản"/>
             <input type="password" placeholder="Password"/>

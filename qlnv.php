@@ -1,3 +1,3 @@
 <?php
-	$sql = "SELECT * FROM WHERE"
+	$sql = "SELECT * FROM WHERE";
 ?>

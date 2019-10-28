@@ -11,7 +11,7 @@
     <div id="container">
         <div id="header">
             <div id="logo">
-                <h1>SHOPPE</h1>
+                <h1>Tiki</h1>
             </div>
             <div id="search">
             <input type="text" value=""
@@ -19,7 +19,7 @@
         class=""><button class="button">
             </div>
             <div id="cart">
-                <h3>Test</h3>
+                <h3>Code to p</h3>
             </div>
         </div>
         <div id="main">

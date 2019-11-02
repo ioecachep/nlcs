@@ -45,7 +45,7 @@
                             </ul>
                         </li>
                         <li onclick="loadThemSanPham()"><a href="#">Thêm Hàng Hóa</a></li>
-                        <li><a href="#">Cập nhật số lượng</a></li>
+                        <li onclick="loadCapnhatsanpham()"><a href="#">Cập nhật số lượng</a></li>
                         <li><a href="#">Coming Soon !!!</a></li>
                     </ul>
                 </div>

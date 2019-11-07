@@ -4,12 +4,25 @@
     <meta charset="UTF-8">
     <title>Thêm Hàng Hóa</title>
     <style>
-        #themhanghoa{
+    table, th, td{
+            border-top:1px solid #ccc;
+            border-bottom:1px solid #ccc;
+        }
+        table{
+            border-collapse:collapse;
+        }
+        td, th {
+            padding: 10px;
+        }
+        h1 {
+            text-align: center;
+        }
+        /* #themhanghoa{
             background: white;
             padding: 10px;
             margin: 10px;
             text-align: center;
-            border-radius: 10px;
+            border-radius: 10px; 
             float: left;
         }
         #themhanghoa td {
@@ -18,13 +31,15 @@
         }
         #themhanghoa input{
             padding: 5px 10px 5px 10px;
-        }
+        } */
     </style>
 </head>
 <body>
     <div id="themhanghoa">
     <form action="action-themhanghoa.php" method="post" enctype="multipart/form-data">
+    </br>
     <h1>Thêm Sản Phẩm</h1>
+    </br>
     <table>
         <tr>
             <td>Mã hàng:</td><td><input type="text" name="mahang"></td>

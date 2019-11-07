@@ -5,18 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Cap Nhat San Pham</title>
+    <style>
+        table, th, td{
+            border-top:1px solid #ccc;
+            border-bottom:1px solid #ccc;
+        }
+        table{
+            border-collapse:collapse;
+        }
+        td, th {
+            padding: 10px;
+        }
+        .img{
+            height: 40px;
+            width: 40px;
+        }
+        
+    </style>
 </head>
 <body>
-    <table border="1px">
+    <div id="reload">
+    <table >
         <tr>
-            <th>Ma hang</th>
-            <th>Ten hang</th>
-            <th>Gia nhap</th>
-            <th>Gia ban</th>
-            <th>So luong</th>
-            <th>Loai hang</th>
-            <th>Sua</th>
-            <th>Xoa</th>
+            <th>Mã Hàng</th>
+            <th>Tên Hàng</th>
+            <th>Giá Nhập</th>
+            <th>Giá Bán</th>
+            <th>Số Lượng</th>
+            <th>Loại Hàng</th>
+            <th>Sửa</th>
+            <th>Xóa</th>
         </tr>
         <?php
                 include 'connect.php';
@@ -32,12 +50,14 @@
                                 <td>".$row['giaban']."</td>
                                 <td>".$row['soluong']."</td>
                                 <td>".$row['tenloai']."</td>
-                                <td>Sua</td>
-                                <td><a href='action-xoasanpham.php?mahang=".$row['mahang']."'>DELETE</a></td>
+                                <td><a href='#'><img alt='".$row['mahang']."' onclick='loadSuasanpham(this.alt)' class='img' src='./img/edit.png'></a></td>
+                                <td><a href='./action/action-xoasanpham.php?mahang=".$row['mahang']."'><img class='img' src='./img/delete.png'></a></td>
                         ";
                     }
                 }
             ?>
     </table>
+    </div>
+    <script language="javascript" src="./quanlykhohang.js"></script>
 </body>
 </html>

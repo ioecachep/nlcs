@@ -6,7 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Loại Hàng Hóa</title>
     <style>
-        td>img{
+        * {
+            text-align: center;
+        }
+        table {
+            width: 100%;
+        }
+        td h3 {
+            text-align: left;
+        }
+        td {
+            text-align: right;
+        }
+        #hasp{
             height: 150px;
             width: 150px;
         }
@@ -17,7 +29,7 @@
             float: left;
             padding: 10px;
             margin: 10px;
-            border-radius: 10px;
+            /* border-radius: 10px; */
         }
         div#ctsp:hover{
             box-shadow: 1px 1px 5px #808080;
@@ -36,6 +48,7 @@
                 while ($row = $result->fetch_assoc()){
                     echo "
                     <div id='ctsp'>
+                    <h3><img id='hasp' src='".$row['hinhanh']."'></h3>
                     <table>
                 <tr>
                     <td><h3>Mã mặt hàng:</h3></td>
@@ -62,8 +75,7 @@
                     <td>".$row['tenloai']."</td>
                 </tr>
                 <tr>
-                    <td><h3>Hình ảnh:</h3></td>
-                    <td><img id='hasp' src='".$row['hinhanh']."'></td>
+                    <td></  br></td>
                 </tr>
             </table>
         </div>";

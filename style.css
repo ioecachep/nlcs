@@ -1,7 +1,7 @@
 * {
     padding: 0px;
     margin: 0 auto;
-    font-family: Courier New;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
 }
 #wrap{
     background: red;
@@ -91,7 +91,7 @@ div#header{
    }
 #chucnang ul li ul{
     width: 200px;
-    background: red;
+    background: #0099ff;
     position: absolute;     
     top: 0px;         
     right: -201px;     

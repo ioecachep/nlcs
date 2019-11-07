@@ -15,7 +15,7 @@
     $soluong=$_POST['soluong'];
     $maloai=$_POST['maloai'];
     $hinhanh="./img/sanpham/" . $_FILES['hinhanh']['name'];
-    include 'connect.php';
+    include './../connect.php';
     if ($hinhanh ==  "./img/sanpham/"){
     $sql = "UPDATE hanghoa SET tenhang='$tenhang',giamua='$giamua',giaban='$giaban',soluong='$soluong',maloai='$maloai' WHERE mahang='$mahang'";
     } else {
@@ -24,9 +24,9 @@
     }
 
     $result = $con->query($sql);
-    move_uploaded_file($_FILES['hinhanh']['tmp_name'],$hinhanh);
+    move_uploaded_file($_FILES['hinhanh']['tmp_name'],"./../".$hinhanh);
     if ($result == 1){
-        header("Location: quanlykhohang.php");
+        header("Location: /quanlykhohang.php");
         echo "Sửa sản phẩm thành công!";
     } else {
         echo "Sửa sản phẩm thất bại";

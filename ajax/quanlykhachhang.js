@@ -1,5 +1,5 @@
-// Hiển thị danh sách nhân viên
-function loadDanhSachNhanVien() {
+// Hiển thị danh sách khách hàng
+function loadDanhSachKhachHang() {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
@@ -7,11 +7,11 @@ function loadDanhSachNhanVien() {
         this.responseText;
       }
     };
-    xhttp.open("GET", "danhsachnhanvien.php", true);
+    xhttp.open("GET", "danhsachkhachhang.php", true);
     xhttp.send();
 }
-// Hiển thị thêm nhân viên
-function loadThemNhanVien() {
+// Hiển thị thêm khách hàng
+function loadThemKH() {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
@@ -19,23 +19,11 @@ function loadThemNhanVien() {
         this.responseText;
       }
     };
-    xhttp.open("GET", "themnhanvien.php", true);
+    xhttp.open("GET", "themkhachhang.php", true);
     xhttp.send();
   }
-  // Hiển thị thêm sản phẩm
-function loadCapnhatnhanvien() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
-        document.getElementById("ajax").innerHTML =
-        this.responseText;
-      }
-    };
-    xhttp.open("GET", "capnhatnhanvien.php", true);
-    xhttp.send();
-  }
-  // Load sửa trong cập nhật nhân viên
-function loadSuaNV(manv) {
+// Load sửa trong cập nhật sản phẩm
+function loadSuaKH(makh) {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
@@ -43,6 +31,6 @@ function loadSuaNV(manv) {
         this.responseText;
       }
     };
-    xhttp.open("GET", "suanhanvien.php?manv=" + manv, true);
+    xhttp.open("GET", "suakhachhang.php?makh=" + makh, true);
     xhttp.send();
   }

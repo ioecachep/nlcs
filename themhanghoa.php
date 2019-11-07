@@ -36,7 +36,7 @@
 </head>
 <body>
     <div id="themhanghoa">
-    <form action="action-themhanghoa.php" method="post" enctype="multipart/form-data">
+    <form action="./action/action-themhanghoa.php" method="post" enctype="multipart/form-data">
     </br>
     <h1>Thêm Sản Phẩm</h1>
     </br>

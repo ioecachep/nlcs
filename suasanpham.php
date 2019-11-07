@@ -36,7 +36,7 @@
 </head>
 <body>
     <div id="suahanghoa">
-    <?php echo "<form action='action-suasanpham.php?mahang=".$_GET['masp']."' method='post' enctype='multipart/form-data'>"; ?>
+    <?php echo "<form action='./action/action-suasanpham.php?mahang=".$_GET['masp']."' method='post' enctype='multipart/form-data'>"; ?>
     </br>
     <?php
         $masp = $_GET['masp'];

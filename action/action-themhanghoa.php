@@ -15,12 +15,12 @@
     $soluong=$_POST['soluong'];
     $maloai=$_POST['maloai'];
     $hinhanh="./img/sanpham/" . $_FILES['hinhanh']['name'];
-	move_uploaded_file($_FILES['hinhanh']['tmp_name'],$hinhanh);
-    include 'connect.php';
+	move_uploaded_file($_FILES['hinhanh']['tmp_name'],"./../".$hinhanh);
+    include './../connect.php';
     $sql = "INSERT INTO hanghoa(mahang,tenhang,giamua,giaban,soluong,hinhanh,maloai) VALUES ('$mahang','$tenhang','$giamua','$giaban','$soluong','$hinhanh','$maloai')";
 	$result = $con->query($sql);
     if ($result == 1){
-        header("Location: quanlykhohang.php");
+        header("Location: /quanlykhohang.php");
         echo "Thêm sản phẩm thành công!";
     } else {
         echo "Thêm sản phẩm thất bại";

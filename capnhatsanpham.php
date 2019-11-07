@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Cap Nhat San Pham</title>
+    <title>Cập nhật sản phẩm</title>
     <style>
         table, th, td{
             border-top:1px solid #ccc;

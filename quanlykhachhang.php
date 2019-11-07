@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css" />
     <title>Quản Lý Khách Hàng</title>
 </head>
-<body onload="loadDanhSachHangHoa()">
+<body onload="loadDanhSachKhachHang()">
     <div id="wrap">
         <div id="menu">
             <ul>
@@ -27,26 +27,26 @@
             <div id="content">
                 <div id="chucnang">
                     <ul>
-                        <li onclick="loadDanhSachHangHoa()"><a href="#">Danh Sách Hàng Hóa</a></li>
-                        <li><a href="#">Loại Hàng Hóa</a>
+                        <li onclick="loadDanhSachKhachHang()"><a href="#">Danh Sách Khách Hàng</a></li>
+                        <li><a href="#">Phân loại khách hàng</a>
                             <ul>
                                 <?php
                                     include 'connect.php';
-                                    $sql = "SELECT * FROM loai";
+                                    $sql = "SELECT * FROM loaikh";
                                     $result = $con->query($sql);
                                     if ($result->num_rows > 0){
                                         while ($row = $result->fetch_assoc()){
                                             echo "
-                                            <li><a onclick='loadLoaiHangHoa(this.innerHTML)' href='#'>".$row['tenloai']."</a></li>
+                                            <li><a onclick='loadLoaiHangHoa(this.innerHTML)' href='#'>".$row['loaikh']."</a></li>
                                             ";
                                         }
                                     }
                                 ?> 
                             </ul>
                         </li>
-                        <li onclick="loadThemSanPham()"><a href="#">Thêm Hàng Hóa</a></li>
-                        <li onclick="loadCapnhatsanpham()"><a href="#">Cập nhật hàng hóa</a></li>
-                        <li><a href="#">Coming Soon !!!</a></li>
+                        <li onclick="loadThemKH()"><a href="#">Thêm Khách Hàng</a></li>
+                        <li onclick="loadCapnhatKhachHang()"><a href="#">Cập nhật thông tin khách hàng</a></li>
+                        <li onclick="loadUuDai()"><a href="#">Ưu đãi</a></li>
                     </ul>
                 </div>
                 <div id="ajax">
@@ -58,6 +58,6 @@
             </div>
         </div>
     </div>
-    <script language="javascript" src="ajax.js"></script>
+    <script language="javascript" src="./ajax/quanlykhachhang.js"></script>
 </body>
 </html>

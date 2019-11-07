@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css" />
     <title>Quản Lý Nhân Viên</title>
 </head>
-<body>
+<body onload="loadDanhSachNhanVien()">
     <div id="wrap">
         <div id="menu">
             <ul>
@@ -29,7 +29,7 @@
                     <ul>
                         <li onclick="loadDanhSachNhanVien()"><a href="#">Danh Sách Nhân Viên</a></li>
                         <li onclick="loadThemNhanVien()"><a href="#">Thêm Nhân Viên</a></li>
-                        <li onclick="loadCapnhatNhanVien()"><a href="#">Cập nhật nhân viên</a></li>
+                        <li onclick="loadCapnhatnhanvien()"><a href="#">Cập nhật nhân viên</a></li>
                         <li><a href="#">Coming Soon !!!</a></li>
                     </ul>
                 </div>

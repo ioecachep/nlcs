@@ -51,7 +51,7 @@
                                 <td>".$row['soluong']."</td>
                                 <td>".$row['tenloai']."</td>
                                 <td><a href='#'><img alt='".$row['mahang']."' onclick='loadSuasanpham(this.alt)' class='img' src='./img/edit.png'></a></td>
-                                <td><a href='./action/action-xoasanpham.php?mahang=".$row['mahang']."'><img class='img' src='./img/delete.png'></a></td>
+                                <td><a href='./action/action-xoasanpham.php?mahang=".$row['mahang']."' onclick='return confirm(this.alt);'><img class='img' src='./img/delete.png'></a></td>
                         ";
                     }
                 }

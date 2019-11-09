@@ -10,6 +10,19 @@ function loadDanhSachKhachHang() {
     xhttp.open("GET", "danhsachkhachhang.php", true);
     xhttp.send();
 }
+// Hiển thị phân loại khách hàng
+function loadPLKH(loaikh) {
+  console.log(loaikh);
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("ajax").innerHTML =
+      this.responseText;
+    }
+  };
+  xhttp.open("GET", "loaikh.php?loaikh="+loaikh, true);
+  xhttp.send();
+}
 // Hiển thị thêm khách hàng
 function loadThemKH() {
     var xhttp = new XMLHttpRequest();

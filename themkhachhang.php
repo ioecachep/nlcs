@@ -38,7 +38,7 @@
     <div id="themhanghoa">
     <form action="./action/action-themkhachhang.php" method="post" enctype="multipart/form-data">
     </br>
-    <h1>Thêm Sản Phẩm</h1>
+    <h1>Thêm Khách Hàng</h1>
     </br>
     <table>
         <tr>

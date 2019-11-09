@@ -53,7 +53,7 @@
                                 <td>".$row['sodienthoai']."</td>
                                 <td>".$row['ngaythamgia']."</td>
                                 <td><a href='#'><img alt='".$row['manv']."' onclick='loadSuaNV(this.alt)' class='img' src='./img/edit.png'></a></td>
-                                <td><a href='./action/action-xoanhanvien.php?manv=".$row['manv']."'><img class='img' src='./img/delete.png'></a></td>
+                                <td><a href='./action/action-xoanhanvien.php?manv=".$row['manv']."' onclick='return confirm(this.alt);'><img class='img' src='./img/delete.png'></a></td>
                         ";
                     }
                 }

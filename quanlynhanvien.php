@@ -13,7 +13,7 @@
             <ul>
                 <a href="index.html"><li><img src="./img/danhmuc.png" alt="danhmuc"><p>Danh mục</p></a>
                 </li>
-                <li><img src="./img/qlbanhang.png" alt="danhmuc"><p>Quản lý bán hàng</p></li>
+                <a href="quanlybanhang.php"><li><img src="./img/qlbanhang.png" alt="danhmuc"><p>Quản lý bán hàng</p></li></a>
                 <a href="quanlykhohang.php"><li><img src="./img/kho.png" alt="kho"><p>Quản lý kho hàng</p></li></a>
                 <li id="selected"><img src="./img/nhanvien.png" alt="nhanvien"><p>Quản lý nhân viên</p></li>
                 <a href="quanlykhachhang.php"><li><img src="./img/khachhang.png" alt="khachhang"><p>Quản lý khách hàng</p></li></a>

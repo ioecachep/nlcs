@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Danh Sách Khách Hàng</title>
+    <title>Phân Loại Khách Hàng</title>
     <style>
         table, th, td{
             border-top:1px solid #ccc;
@@ -37,8 +37,9 @@
             <th>Xóa</th>
         </tr>
         <?php
+                $loaikh = $_GET['loaikh'];
                 include 'connect.php';
-                $sql = "SELECT makh, tenkh, gioitinh, diachi, sodienthoai, loaikh FROM khachhang, loaikh WHERE khachhang.maloaikh=loaikh.maloaikh;";
+                $sql = "SELECT makh, tenkh, gioitinh, diachi, sodienthoai, loaikh FROM khachhang, loaikh WHERE khachhang.maloaikh=loaikh.maloaikh and loaikh='$loaikh'";
                 $result = $con->query($sql);
                 if ($result->num_rows > 0){
                     while ($row = $result->fetch_assoc()){
@@ -51,7 +52,7 @@
                                 <td>".$row['sodienthoai']."</td>
                                 <td>".$row['loaikh']."</td>
                                 <td><a href='#'><img alt='".$row['makh']."' onclick='loadSuaKH(this.alt)' class='img' src='./img/edit.png'></a></td>
-                                <td><a href='./action/action-xoakhachhang.php?makh=".$row['makh']."' onclick='return confirm(this.alt);'><img class='img' alt='Ban co muon xoa' src='./img/delete.png'></a></td>
+                                <td><a href='./action/action-xoakhachhang.php?makh=".$row['makh']."'><img class='img' src='./img/delete.png'></a></td>
                         ";
                     }
                 }

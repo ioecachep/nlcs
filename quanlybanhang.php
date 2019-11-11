@@ -37,17 +37,22 @@
                                     if ($result->num_rows > 0){
                                         while ($row = $result->fetch_assoc()){
                                             echo "
-                                            <li><a onclick='loadLoaiHangHoa(this.innerHTML)' href='#'>".$row['tenloai']."</a></li>
+                                            <li><a onclick='loadTheoLoaiHang(this.innerHTML)' href='#'>".$row['tenloai']."</a></li>
                                             ";
                                         }
                                     }
                                 ?> 
                             </ul>
                         </li>
-                        <li onclick="loadThemSanPham()"><a href="#">Thêm Hàng Hóa</a></li>
-                        <li onclick="loadCapnhatsanpham()"><a href="#">Cập nhật hàng hóa</a></li>
-                        <li><a href="#">Coming Soon !!!</a></li>
+                        <li onclick="loadTaoDonHang()"><a href="#">Tạo Đơn Hàng</a></li>
                     </ul>
+                    <br>
+                    <br>
+                    <div id="ajax-donhang">
+                                    <?php
+                                        include 'giohang.php';
+                                    ?>
+                    </div>
                 </div>
                 <div id="ajax">
                     xin chào

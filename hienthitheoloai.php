@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Danh Sách Sản Phẩm</title>
+    <title>Loại Hàng Hóa</title>
     <style>
         * {
             text-align: center;
@@ -47,16 +47,15 @@
 <body>
     <div id="SP">
     <?php
+            $maloai = $_GET['loai'];
             include 'connect.php';
-            $sql = "SELECT mahang,tenhang,giamua,giaban,soluong,hinhanh,tenloai FROM hanghoa, loai WHERE hanghoa.maloai=loai.maloai;";
+            $sql = "select * from loai,hanghoa where loai.maloai=hanghoa.maloai and loai.tenloai='".$maloai."'";
             $result = $con->query($sql);
             if ($result->num_rows > 0){
                 while ($row = $result->fetch_assoc()){
                     echo "
                     <div id='ctsp'>
-                    <form name='form' action='./action/action-addsanpham.php?mahang=".$row['mahang']."' method='post' enctype='multipart/form-data'>
                     <h3><img id='hasp' src='".$row['hinhanh']."'></h3>
-                </tr>
                     <table>
                 <tr>
                     <td><h3>Mã mặt hàng:</h3></td>
@@ -89,13 +88,11 @@
                     <input type='submit' name='themsp' value='Chọn'></td>
                 </tr>
             </table>
-            </form>
         </div>";
                     }
                 }
             ?> 
         </div>
     </div>
-    <script language="javascript" src="./ajax/quanlybanhang.js"></script>
 </body>
 </html>

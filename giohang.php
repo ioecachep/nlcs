@@ -1,11 +1,20 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-body {font-family: Arial, Helvetica, sans-serif;}
-* {box-sizing: border-box;}
+    #giohang {
+        text-align: left;
+    }
+    #giohang table,#giohang  th,#giohang td{
+        border-top:1px solid #ccc;
+        border-bottom:1px solid #ccc;
+    }
+    #giohang table{
+        border-collapse:collapse;
+    }
+    #giohang  td,#giohang  th {
+        padding: 6px;
+    }
 
+#giohang body {font-family: Arial, Helvetica, sans-serif;}
+#giohang * {box-sizing: border-box;} 
 /* Button used to open the contact form - fixed at the bottom of the page */
 .open-button {
   background-color: #555;
@@ -15,24 +24,24 @@ body {font-family: Arial, Helvetica, sans-serif;}
   cursor: pointer;
   opacity: 0.8;
   position: fixed;
-  bottom: 23px;
-  right: 28px;
+  /* top: 23px;
+  right: 28px; */
   width: 280px;
 }
 
 /* The popup form - hidden by default */
 .form-popup {
-  display: none;
+  display: block;
   position: fixed;
-  bottom: 0;
-  right: 15px;
+  /* top: 23px;
+  right: 28px; */
   border: 3px solid #f1f1f1;
   z-index: 9;
 }
 
 /* Add styles to the form container */
 .form-container {
-  max-width: 300px;
+  width: 300px;
   padding: 10px;
   background-color: white;
 }
@@ -73,31 +82,44 @@ body {font-family: Arial, Helvetica, sans-serif;}
 .form-container .btn:hover, .open-button:hover {
   opacity: 1;
 }
+#del {
+    height: 10px;
+    width: 10px;
+}
 </style>
-</head>
+<html>
 <body>
-
-<h2>Popup Form</h2>
-<p>Click on the button at the bottom of this page to open the login form.</p>
-<p>Note that the button and the form is fixed - they will always be positioned to the bottom of the browser window.</p>
-
-<button class="open-button" onclick="openForm()">Open Form</button>
-
+<div id="giohang">
+<button class="open-button" onclick="openForm()">Giỏ hàng</button>
 <div class="form-popup" id="myForm">
-  <form action="/action_page.php" class="form-container">
-    <h1>Login</h1>
-
-    <label for="email"><b>Email</b></label>
-    <input type="text" placeholder="Enter Email" name="email" required>
-
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
-
-    <button type="submit" class="btn">Login</button>
-    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-  </form>
+<form action="" class="form-container">
+<button type="button" class="btn cancel" onclick="closeForm()">Giỏ hàng</button>
+<table>
+<?php
+include 'connect.php';
+$sql = "SELECT a.mahang, a.tenhang, a.giaban, b.soluongmua FROM hanghoa a, giohang b WHERE a.mahang=b.mahang;";
+$result = $con->query($sql);
+if ($result->num_rows > 0){
+    while ($row = $result->fetch_assoc()){
+        echo "
+        <tr>
+            <!--<td>".$row['mahang']."</td>-->
+            <td>".$row['tenhang']."</td>
+            <td>".$row['giaban']."</td>
+            <td>".$row['soluongmua']."</td>
+            <td><a href='/action/action-delete-product.php?mahang=".$row['mahang']."'><img id='del' src='./img/delete_product.png' alt='x'></a></td>
+        </tr>
+        ";
+    }
+}
+?>
+</td>
+</tr>
+</table>
+<button type="button" class="btn cancel" onclick="closeForm()">Thanh toán</button>
+</form>
+</div> <!-- class Popup -->
 </div>
-
 <script>
 function openForm() {
   document.getElementById("myForm").style.display = "block";
@@ -107,6 +129,5 @@ function closeForm() {
   document.getElementById("myForm").style.display = "none";
 }
 </script>
-
 </body>
 </html>

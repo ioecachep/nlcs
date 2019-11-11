@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<!-- saved from url=(0036)http://localhost/danhsachmuahang.php -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Danh Sách Sản Phẩm</title>
+    <style>
+        * {
+            text-align: center;
+        }
+        table {
+            width: 100%;
+        }
+        td h3 {
+            text-align: left;
+        }
+        td {
+            text-align: right;
+        }
+        #hasp{
+            height: 150px;
+            width: 150px;
+        }
+        div#ctsp{
+            width: 350px;
+            height:400px;
+            background: white;
+            float: left;
+            padding: 10px;
+            margin: 10px;
+            /*border-radius: 10px;*/
+        }
+        div#ctsp:hover{
+            box-shadow: 1px 1px 5px #808080;
+            background: white;
+        }
+        .add {
+            padding: 16px 10px;
+            padding: 16px 32px;
+            width: 10px;
+        }
+        button {
+            padding: 16px 10px;
+        }
+        #button1{
+            background: blue;
+            display: block;
+            padding: 16px 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="SP">
+    
+                    <div id="ctsp">
+                    <form name="form" action="http://localhost/action/action-addsanpham.php?=PC1" method="post" enctype="multipart/form-data">
+                    <h3><img id="hasp" src="./Danh Sách Sản Phẩm_files/poca.jpg"></h3>
+                
+                    <table>
+                <tbody><tr>
+                    <td><h3>Mã mặt hàng:</h3></td>
+                    <td>PC1</td>
+                </tr>
+                <tr>
+                    <td><h3>Tên mặt hàng:</h3></td>
+                    <td>Khoai Tây Chiên Poca</td>
+                </tr>
+                <tr>
+                    <td><h3>Giá nhập:</h3></td>
+                    <td>5700</td>
+                </tr>
+                <tr>
+                    <td><h3>Giá bán:</h3></td>
+                    <td>6000</td>
+                </tr>
+                <tr>
+                    <td><h3>Số lượng:</h3></td>
+                    <td>100</td>
+                </tr>
+                <tr>
+                    <td><h3>Loại hàng:</h3></td>
+                    <td>Bánh Kẹo</td>
+                </tr>
+                <tr>
+                    <td><p id="button1" onclick="giamsoluong(document.getElementById(" addpc1'))'="">-</p><input type="text" id="addPC1" class="add" name="soluong" value="1"><p id="button1" onclick="tangsoluong(document.getElementById(" addpc1'))'="">+</p></td>
+                    <td><input type="submit" name="themsp" value="Chọn"></td>
+                </tr>
+            </tbody></table>
+            </form>
+        </div>
+                    <div id="ctsp">
+                    <form name="form" action="http://localhost/action/action-addsanpham.php?=PC2" method="post" enctype="multipart/form-data">
+                    <h3><img id="hasp" src="./Danh Sách Sản Phẩm_files/pocaxanh.jpg"></h3>
+                
+                    <table>
+                <tbody><tr>
+                    <td><h3>Mã mặt hàng:</h3></td>
+                    <td>PC2</td>
+                </tr>
+                <tr>
+                    <td><h3>Tên mặt hàng:</h3></td>
+                    <td>Poca (Vị Phô Mai)</td>
+                </tr>
+                <tr>
+                    <td><h3>Giá nhập:</h3></td>
+                    <td>5700</td>
+                </tr>
+                <tr>
+                    <td><h3>Giá bán:</h3></td>
+                    <td>6000</td>
+                </tr>
+                <tr>
+                    <td><h3>Số lượng:</h3></td>
+                    <td>100</td>
+                </tr>
+                <tr>
+                    <td><h3>Loại hàng:</h3></td>
+                    <td>Bánh Kẹo</td>
+                </tr>
+                <tr>
+                    <td><p id="button1" onclick="giamsoluong(document.getElementById(" addpc2'))'="">-</p><input type="text" id="addPC2" class="add" name="soluong" value="1"><p id="button1" onclick="tangsoluong(document.getElementById(" addpc2'))'="">+</p></td>
+                    <td><input type="submit" name="themsp" value="Chọn"></td>
+                </tr>
+            </tbody></table>
+            </form>
+        </div>
+                    <div id="ctsp">
+                    <form name="form" action="http://localhost/action/action-addsanpham.php?=RB1" method="post" enctype="multipart/form-data">
+                    <h3><img id="hasp" src="./Danh Sách Sản Phẩm_files/rongbiensay.jpg"></h3>
+                
+                    <table>
+                <tbody><tr>
+                    <td><h3>Mã mặt hàng:</h3></td>
+                    <td>RB1</td>
+                </tr>
+                <tr>
+                    <td><h3>Tên mặt hàng:</h3></td>
+                    <td>Rong Biển Sấy</td>
+                </tr>
+                <tr>
+                    <td><h3>Giá nhập:</h3></td>
+                    <td>21000</td>
+                </tr>
+                <tr>
+                    <td><h3>Giá bán:</h3></td>
+                    <td>22000</td>
+                </tr>
+                <tr>
+                    <td><h3>Số lượng:</h3></td>
+                    <td>100</td>
+                </tr>
+                <tr>
+                    <td><h3>Loại hàng:</h3></td>
+                    <td>Bánh Kẹo</td>
+                </tr>
+                <tr>
+                    <td><p id="button1" onclick="giamsoluong(document.getElementById(" addrb1'))'="">-</p><input type="text" id="addRB1" class="add" name="soluong" value="1"><p id="button1" onclick="tangsoluong(document.getElementById(" addrb1'))'="">+</p></td>
+                    <td><input type="submit" name="themsp" value="Chọn"></td>
+                </tr>
+            </tbody></table>
+            </form>
+        </div>
+                    <div id="ctsp">
+                    <form name="form" action="http://localhost/action/action-addsanpham.php?=BH1" method="post" enctype="multipart/form-data">
+                    <h3><img id="hasp" src="./Danh Sách Sản Phẩm_files/heineken.jpg"></h3>
+                
+                    <table>
+                <tbody><tr>
+                    <td><h3>Mã mặt hàng:</h3></td>
+                    <td>BH1</td>
+                </tr>
+                <tr>
+                    <td><h3>Tên mặt hàng:</h3></td>
+                    <td>Heineken</td>
+                </tr>
+                <tr>
+                    <td><h3>Giá nhập:</h3></td>
+                    <td>14000</td>
+                </tr>
+                <tr>
+                    <td><h3>Giá bán:</h3></td>
+                    <td>15000</td>
+                </tr>
+                <tr>
+                    <td><h3>Số lượng:</h3></td>
+                    <td>240</td>
+                </tr>
+                <tr>
+                    <td><h3>Loại hàng:</h3></td>
+                    <td>Bia - Rượu</td>
+                </tr>
+                <tr>
+                    <td><p id="button1" onclick="giamsoluong(document.getElementById(" addbh1'))'="">-</p><input type="text" id="addBH1" class="add" name="soluong" value="1"><p id="button1" onclick="tangsoluong(document.getElementById(" addbh1'))'="">+</p></td>
+                    <td><input type="submit" name="themsp" value="Chọn"></td>
+                </tr>
+            </tbody></table>
+            </form>
+        </div>
+                    <div id="ctsp">
+                    <form name="form" action="http://localhost/action/action-addsanpham.php?=SB1" method="post" enctype="multipart/form-data">
+                    <h3><img id="hasp" src="./Danh Sách Sản Phẩm_files/strongbowga.jpg"></h3>
+                
+                    <table>
+                <tbody><tr>
+                    <td><h3>Mã mặt hàng:</h3></td>
+                    <td>SB1</td>
+                </tr>
+                <tr>
+                    <td><h3>Tên mặt hàng:</h3></td>
+                    <td>Strongbow Gold Apple</td>
+                </tr>
+                <tr>
+                    <td><h3>Giá nhập:</h3></td>
+                    <td>15800</td>
+                </tr>
+                <tr>
+                    <td><h3>Giá bán:</h3></td>
+                    <td>16000</td>
+                </tr>
+                <tr>
+                    <td><h3>Số lượng:</h3></td>
+                    <td>240</td>
+                </tr>
+                <tr>
+                    <td><h3>Loại hàng:</h3></td>
+                    <td>Bia - Rượu</td>
+                </tr>
+                <tr>
+                    <td><p id="button1" onclick="giamsoluong(document.getElementById(" addsb1'))'="">-</p><input type="text" id="addSB1" class="add" name="soluong" value="1"><p id="button1" onclick="tangsoluong(document.getElementById(" addsb1'))'="">+</p></td>
+                    <td><input type="submit" name="themsp" value="Chọn"></td>
+                </tr>
+            </tbody></table>
+            </form>
+        </div>
+                    <div id="ctsp">
+                    <form name="form" action="http://localhost/action/action-addsanpham.php?=SB2" method="post" enctype="multipart/form-data">
+                    <h3><img id="hasp" src="./Danh Sách Sản Phẩm_files/strongbowh.jpg"></h3>
+                
+                    <table>
+                <tbody><tr>
+                    <td><h3>Mã mặt hàng:</h3></td>
+                    <td>SB2</td>
+                </tr>
+                <tr>
+                    <td><h3>Tên mặt hàng:</h3></td>
+                    <td>Strongbow Honney</td>
+                </tr>
+                <tr>
+                    <td><h3>Giá nhập:</h3></td>
+                    <td>15800</td>
+                </tr>
+                <tr>
+                    <td><h3>Giá bán:</h3></td>
+                    <td>16000</td>
+                </tr>
+                <tr>
+                    <td><h3>Số lượng:</h3></td>
+                    <td>240</td>
+                </tr>
+                <tr>
+                    <td><h3>Loại hàng:</h3></td>
+                    <td>Bia - Rượu</td>
+                </tr>
+                <tr>
+                    <td><p id="button1" onclick="giamsoluong(document.getElementById(" addsb2'))'="">-</p><input type="text" id="addSB2" class="add" name="soluong" value="1"><p id="button1" onclick="tangsoluong(document.getElementById(" addsb2'))'="">+</p></td>
+                    <td><input type="submit" name="themsp" value="Chọn"></td>
+                </tr>
+            </tbody></table>
+            </form>
+        </div>
+                    <div id="ctsp">
+                    <form name="form" action="http://localhost/action/action-addsanpham.php?=KR1" method="post" enctype="multipart/form-data">
+                    <h3><img id="hasp" src="./Danh Sách Sản Phẩm_files/kemdanhrangps.jpg"></h3>
+                
+                    <table>
+                <tbody><tr>
+                    <td><h3>Mã mặt hàng:</h3></td>
+                    <td>KR1</td>
+                </tr>
+                <tr>
+                    <td><h3>Tên mặt hàng:</h3></td>
+                    <td>Kem đánh răng PS</td>
+                </tr>
+                <tr>
+                    <td><h3>Giá nhập:</h3></td>
+                    <td>14500</td>
+                </tr>
+                <tr>
+                    <td><h3>Giá bán:</h3></td>
+                    <td>15000</td>
+                </tr>
+                <tr>
+                    <td><h3>Số lượng:</h3></td>
+                    <td>50</td>
+                </tr>
+                <tr>
+                    <td><h3>Loại hàng:</h3></td>
+                    <td>Hàng Tiêu Dùng</td>
+                </tr>
+                <tr>
+                    <td><p id="button1" onclick="giamsoluong(document.getElementById(" addkr1'))'="">-</p><input type="text" id="addKR1" class="add" name="soluong" value="1"><p id="button1" onclick="tangsoluong(document.getElementById(" addkr1'))'="">+</p></td>
+                    <td><input type="submit" name="themsp" value="Chọn"></td>
+                </tr>
+            </tbody></table>
+            </form>
+        </div>
+                    <div id="ctsp">
+                    <form name="form" action="http://localhost/action/action-addsanpham.php?=KR2" method="post" enctype="multipart/form-data">
+                    <h3><img id="hasp" src="./Danh Sách Sản Phẩm_files/kemdanhrangcolgate.jpg"></h3>
+                
+                    <table>
+                <tbody><tr>
+                    <td><h3>Mã mặt hàng:</h3></td>
+                    <td>KR2</td>
+                </tr>
+                <tr>
+                    <td><h3>Tên mặt hàng:</h3></td>
+                    <td>K.Đ.Răng Colgate</td>
+                </tr>
+                <tr>
+                    <td><h3>Giá nhập:</h3></td>
+                    <td>26000</td>
+                </tr>
+                <tr>
+                    <td><h3>Giá bán:</h3></td>
+                    <td>27000</td>
+                </tr>
+                <tr>
+                    <td><h3>Số lượng:</h3></td>
+                    <td>50</td>
+                </tr>
+                <tr>
+                    <td><h3>Loại hàng:</h3></td>
+                    <td>Hàng Tiêu Dùng</td>
+                </tr>
+                <tr>
+                    <td><p id="button1" onclick="giamsoluong(document.getElementById(" addkr2'))'="">-</p><input type="text" id="addKR2" class="add" name="soluong" value="1"><p id="button1" onclick="tangsoluong(document.getElementById(" addkr2'))'="">+</p></td>
+                    <td><input type="submit" name="themsp" value="Chọn"></td>
+                </tr>
+            </tbody></table>
+            </form>
+        </div>
+                    <div id="ctsp">
+                    <form name="form" action="http://localhost/action/action-addsanpham.php?=CC1" method="post" enctype="multipart/form-data">
+                    <h3><img id="hasp" src="./Danh Sách Sản Phẩm_files/cocacola.jpg"></h3>
+                
+                    <table>
+                <tbody><tr>
+                    <td><h3>Mã mặt hàng:</h3></td>
+                    <td>CC1</td>
+                </tr>
+                <tr>
+                    <td><h3>Tên mặt hàng:</h3></td>
+                    <td>Cocacola</td>
+                </tr>
+                <tr>
+                    <td><h3>Giá nhập:</h3></td>
+                    <td>5700</td>
+                </tr>
+                <tr>
+                    <td><h3>Giá bán:</h3></td>
+                    <td>7000</td>
+                </tr>
+                <tr>
+                    <td><h3>Số lượng:</h3></td>
+                    <td>240</td>
+                </tr>
+                <tr>
+                    <td><h3>Loại hàng:</h3></td>
+                    <td>Nước Giải Khát</td>
+                </tr>
+                <tr>
+                    <td><p id="button1" onclick="giamsoluong(document.getElementById(" addcc1'))'="">-</p><input type="text" id="addCC1" class="add" name="soluong" value="1"><p id="button1" onclick="tangsoluong(document.getElementById(" addcc1'))'="">+</p></td>
+                    <td><input type="submit" name="themsp" value="Chọn"></td>
+                </tr>
+            </tbody></table>
+            </form>
+        </div>
+                    <div id="ctsp">
+                    <form name="form" action="http://localhost/action/action-addsanpham.php?=PS1" method="post" enctype="multipart/form-data">
+                    <h3><img id="hasp" src="./Danh Sách Sản Phẩm_files/pepsi.jpg"></h3>
+                
+                    <table>
+                <tbody><tr>
+                    <td><h3>Mã mặt hàng:</h3></td>
+                    <td>PS1</td>
+                </tr>
+                <tr>
+                    <td><h3>Tên mặt hàng:</h3></td>
+                    <td>Pepsi</td>
+                </tr>
+                <tr>
+                    <td><h3>Giá nhập:</h3></td>
+                    <td>5700</td>
+                </tr>
+                <tr>
+                    <td><h3>Giá bán:</h3></td>
+                    <td>7000</td>
+                </tr>
+                <tr>
+                    <td><h3>Số lượng:</h3></td>
+                    <td>240</td>
+                </tr>
+                <tr>
+                    <td><h3>Loại hàng:</h3></td>
+                    <td>Nước Giải Khát</td>
+                </tr>
+                <tr>
+                    <td><p id="button1" onclick="giamsoluong(document.getElementById(" addps1'))'="">-</p><input type="text" id="addPS1" class="add" name="soluong" value="1"><p id="button1" onclick="tangsoluong(document.getElementById(" addps1'))'="">+</p></td>
+                    <td><input type="submit" name="themsp" value="Chọn"></td>
+                </tr>
+            </tbody></table>
+            </form>
+        </div> 
+        </div>
+    
+    <script language="javascript" src="./Danh Sách Sản Phẩm_files/quanlybanhang.js.tải xuống"></script>
+
+</body></html>

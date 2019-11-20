@@ -11,7 +11,7 @@
     <div id="wrap">
         <div id="menu">
             <ul>
-                <a href="index.html"><li><img src="./img/danhmuc.png" alt="danhmuc"><p>Danh mục</p></a>
+                <a href="index.php"><li><img src="./img/danhmuc.png" alt="danhmuc"><p>Danh mục</p></a>
                 </li>
                 <a href="quanlybanhang.php"><li><img src="./img/qlbanhang.png" alt="danhmuc"><p>Quản lý bán hàng</p></li></a>
                 <li id="selected"><img src="./img/kho.png" alt="kho"><p>Quản lý kho hàng</p></li>
@@ -28,7 +28,7 @@
                 <div id="chucnang">
                     <ul>
                         <li onclick="loadDanhSachHangHoa()"><a href="#">Danh Sách Hàng Hóa</a></li>
-                        <li><a href="#">Loại Hàng Hóa</a>
+                        <li onclick="loadDanhSachHangHoa()"><a href="#">Loại Hàng Hóa</a>
                             <ul>
                                 <?php
                                     include 'connect.php';

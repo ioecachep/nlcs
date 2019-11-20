@@ -17,11 +17,7 @@
                         <p>Danh mục</p>
                 </a>
                 </li>
-                <a href="#">
-                    <li><img src="./img/qlbanhang.png" alt="danhmuc">
-                        <p>Quản lý bán hàng</p>
-                    </li>
-                </a>
+                <a href="quanlybanhang.php"><li><img src="./img/qlbanhang.png" alt="danhmuc"><p>Quản lý bán hàng</p></li></a>
                 <a href="quanlykhohang.php">
                     <li><img src="./img/kho.png" alt="kho">
                         <p>Quản lý kho hàng</p>

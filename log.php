@@ -20,10 +20,13 @@
             height: 40px;
             width: 40px;
         }
-        
+        #log{
+            background: white;
+        }
     </style>   
 </head>
 <body>
+    <div id="log">
     <table>
         <tr>
             <th width="150px">Thời Gian</th>
@@ -49,5 +52,6 @@
             }
         ?>
     </table>
+    </div>
 </body>
 </html>

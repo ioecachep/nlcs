@@ -35,6 +35,9 @@
                     $sqlADD = "INSERT INTO chitietdonhang (madh,mahang,soluong) VALUES ($madh,'$mahang',$souong);";
                     $resultADD = $con->query($sqlADD);
                     if ($resultADD == 1){
+                        $sqlUPDATE = "UPDATE hanghoa SET soluong=soluong-$souong WHERE mahang='$mahang'";
+                        echo $sqlUPDATE;
+                        $resultUPDATE = $con->query($sqlUPDATE);;
                         echo $sqlADD;
                         echo "Thành Công";
                     } else {

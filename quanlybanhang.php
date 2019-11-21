@@ -66,7 +66,7 @@
                 </div>
             </div>
             <div id="footer">
-                <h3>(c) 2019</h3>
+                <h3>(c) PHP</h3>
             </div>
         </div>
     </div>

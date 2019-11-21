@@ -17,6 +17,8 @@
         // -->
         include './../connect.php';
         $manv  = $_GET['manv'];
+        $sqlLogin = "DELETE FROM taikhoan WHERE manv='$manv';";
+        $resultLogin =$con->query($sqlLogin);
         $sql = "DELETE FROM nhanvien WHERE manv = '$manv';";
         $result = $con->query($sql);
         if ($result == 1){

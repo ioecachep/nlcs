@@ -23,12 +23,16 @@
     $sodienthoai=$_POST['sodienthoai'];
     $ngaybatdau=$_POST['ngaybatdau'];
     $hinhanh="./img/sanpham/" . $_FILES['hinhanh']['name'];
+    $taikhoan=$_POST['taikhoan'];
+    $matkhau=md5("123456");
 	move_uploaded_file($_FILES['hinhanh']['tmp_name'],"./../".$hinhanh);
     include './../connect.php';
     $sql = "INSERT INTO nhanvien(manv,hoten,gioitinh,ngaysinh,quequan,sodienthoai,ngaythamgia,hinhanh) VALUES ('$manv','$hoten','$gioitinh','$ngaysinh','$quequan','$sodienthoai','$ngaybatdau','$hinhanh')";
 	$result = $con->query($sql);
     if ($result == 1){
         echo $sql;
+        $sqlLogin = "INSERT INTO taikhoan (tentk,matkhau,quyen,manv) VALUES ('$taikhoan','$matkhau','nv','$manv')";
+        $resultLogin =$con->query($sqlLogin);
         $sqlLog = 'INSERT INTO nhatki (ngaynhatki,manv,noidung,lenhsql) VALUES ("'.$ngay.'","'.$manv1.'","'.$noidung.'","'.$sql.'")';
         echo $sqlLog;
         $resultLog =$con->query($sqlLog);

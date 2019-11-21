@@ -1,5 +1,6 @@
 <?php
     include 'session.php';
+    header ('Location: quanlybanhang.php');
 ?>
 <!DOCTYPE html>
 <html lang="vn">

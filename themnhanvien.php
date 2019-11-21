@@ -75,6 +75,9 @@
             <td>Hình ảnh:</td><td><input type="file" name="hinhanh"></td>
         </tr>
         <tr>
+            <td>Tài Khoản:</td><td><input type="text" name="taikhoan"></td>
+        </tr>
+        <tr>
             <td></td>
 			<td> 
 				<input type="submit" name="themsp" value="Thêm nhân viên">

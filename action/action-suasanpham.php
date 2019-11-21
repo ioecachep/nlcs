@@ -8,6 +8,13 @@
 </head>
 <body>
     <?php
+    // --> Ghi Log
+    session_start();
+    date_default_timezone_set("Asia/Bangkok");
+    $ngay = date('Y-m-d H:i:s');
+    $manv=$_SESSION['manv'];
+    $noidung="Sửa Sản Phẩm";
+    // -->
     $mahang=$_GET['mahang'];
     $tenhang=$_POST['tenhang'];
     $giamua=$_POST['giamua'];
@@ -26,6 +33,9 @@
     $result = $con->query($sql);
     move_uploaded_file($_FILES['hinhanh']['tmp_name'],"./../".$hinhanh);
     if ($result == 1){
+        $sqlLog = 'INSERT INTO nhatki (ngaynhatki,manv,noidung,lenhsql) VALUES ("'.$ngay.'","'.$manv.'","'.$noidung.'","'.$sql.'")';
+        echo $sqlLog;
+        $result1 =$con->query($sqlLog);
         header("Location: /quanlykhohang.php");
         echo "Sửa sản phẩm thành công!";
     } else {

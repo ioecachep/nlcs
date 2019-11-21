@@ -55,6 +55,7 @@
                 while ($row = $result->fetch_assoc()){
                     echo "
                     <div id='ctsp'>
+                    <form name='form' action='./action/action-addsanpham.php?mahang=".$row['mahang']."' method='post' enctype='multipart/form-data'>
                     <h3><img id='hasp' src='".$row['hinhanh']."'></h3>
                     <table>
                 <tr>
@@ -88,6 +89,7 @@
                     <input type='submit' name='themsp' value='Chọn'></td>
                 </tr>
             </table>
+            </form>
         </div>";
                     }
                 }

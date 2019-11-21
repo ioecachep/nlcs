@@ -1,3 +1,6 @@
+<?php
+    include 'session.php';
+?>
 <!DOCTYPE html>
 <html lang="vn">
 <head>
@@ -17,8 +20,10 @@
                 <li id="selected"><img src="./img/kho.png" alt="kho"><p>Quản lý kho hàng</p></li>
                 <a href="quanlynhanvien.php"><li><img src="./img/nhanvien.png" alt="nhanvien"><p>Quản lý nhân viên</p></li></a>
                 <a href="quanlykhachhang.php"><li><img src="./img/khachhang.png" alt="khachhang"><p>Quản lý khách hàng</p></li></a>
-                <li><img src="./img/thongke.png" alt="thongke"><p>Thống kê</p></li>
+                <a href="quanlythongke.php"><li><img src="./img/thongke.png" alt="thongke"><p>Thống kê</p></li></a>
             </ul>
+            <br>
+            <a href="/login/dangxuat.php"><button id="logout">Đăng xuất</button></a>
         </div>
         <div id="thanbai">
             <div id="header">
@@ -46,11 +51,11 @@
                         </li>
                         <li onclick="loadThemSanPham()"><a href="#">Thêm Hàng Hóa</a></li>
                         <li onclick="loadCapnhatsanpham()"><a href="#">Cập nhật hàng hóa</a></li>
-                        <li><a href="#">Coming Soon !!!</a></li>
+                        <!-- <li><a href="#">Coming Soon !!!</a></li> -->
                     </ul>
                 </div>
                 <div id="ajax">
-                    xin chào
+
                 </div>
             </div>
             <div id="footer">

@@ -8,7 +8,11 @@
 </head>
 <body>
     <?php
-    $manv="002";
+    session_start();
+    date_default_timezone_set("Asia/Bangkok");
+    $noidung="Thanh Toán Đơn Hàng";
+    $ngay = date('Y-m-d H:i:s');
+    $manv=$_SESSION['manv'];
     $makh=$_POST['makh'];
     $ngayban=date("Y-m-d");
     include './../connect.php';
@@ -43,6 +47,9 @@
         }
         $sqlDEL = "DELETE FROM giohang ";
         $resultDEL = $con->query($sqlDEL);
+        $sqlLog = 'INSERT INTO nhatki (ngaynhatki,manv,noidung,lenhsql) VALUES ("'.$ngay.'","'.$manv.'","'.$noidung.'","'.$sqlInsert.'")';
+        echo $sqlLog;
+        $resultLog =$con->query($sqlLog);
         if ($resultDEL == 1){
             echo "Thành công";
             header ("Location: /quanlybanhang.php");

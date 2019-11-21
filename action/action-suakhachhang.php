@@ -8,6 +8,13 @@
 </head>
 <body>
     <?php
+    // --> Ghi Log
+    session_start();
+    date_default_timezone_set("Asia/Bangkok");
+    $ngay = date('Y-m-d H:i:s');
+    $manv=$_SESSION['manv'];
+    $noidung="Sửa Thông tin khách hàng";
+    // -->
     $makh=$_GET['makh'];
     $hoten=$_POST['tenkh'];
     $gioitinh=$_POST['gioitinh'];
@@ -19,6 +26,9 @@
 	$result = $con->query($sql);
     if ($result == 1){
         echo $sql;
+        $sqlLog = 'INSERT INTO nhatki (ngaynhatki,manv,noidung,lenhsql) VALUES ("'.$ngay.'","'.$manv.'","'.$noidung.'","'.$sql.'")';
+        echo $sqlLog;
+        $result1 =$con->query($sqlLog);
         header("Location: /quanlykhachhang.php");
         echo "Sửa khách hành công!";
     } else {

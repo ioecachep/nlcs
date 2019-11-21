@@ -1,3 +1,6 @@
+<?php
+    include 'session.php';
+?>
 <!DOCTYPE html>
 <html lang="vn">
 <head>
@@ -11,14 +14,15 @@
     <div id="wrap">
         <div id="menu">
             <ul>
-                <a href="index.php"><li><img src="./img/danhmuc.png" alt="danhmuc"><p>Danh mục</p></a>
-                </li>
+                <a href="index.php"><li><img src="./img/danhmuc.png" alt="danhmuc"><p>Danh mục</p></li></a>
                 <a href="quanlybanhang.php"><li><img src="./img/qlbanhang.png" alt="danhmuc"><p>Quản lý bán hàng</p></li></a>
                 <a href="quanlykhohang.php"><li><img src="./img/kho.png" alt="kho"><p>Quản lý kho hàng</p></li></a>
                 <a href="quanlynhanvien.php"><li><img src="./img/nhanvien.png" alt="nhanvien"><p>Quản lý nhân viên</p></li></a>
-                <li  id="selected"><img src="./img/khachhang.png" alt="khachhang"><p>Quản lý khách hàng</p></li>
-                <li><img src="./img/thongke.png" alt="thongke"><p>Thống kê</p></li>
+                <li id="selected"><img src="./img/khachhang.png" alt="khachhang"><p>Quản lý khách hàng</p></li>
+                <a href="quanlythongke.php"><li><img src="./img/thongke.png" alt="thongke"><p>Thống kê</p></li></a>
             </ul>
+            <br>
+            <a href="/login/dangxuat.php"><button id="logout">Đăng xuất</button></a>
         </div>
         <div id="thanbai">
             <div id="header">
@@ -45,12 +49,11 @@
                             </ul>
                         </li>
                         <li onclick="loadThemKH()"><a href="#">Thêm Khách Hàng</a></li>
-                        <li onclick="loadCapnhatKhachHang()"><a href="#">Cập nhật thông tin khách hàng</a></li>
                         <li onclick="loadUuDai()"><a href="#">Ưu đãi</a></li>
                     </ul>
                 </div>
                 <div id="ajax">
-                    xin chào
+
                 </div>
             </div>
             <div id="footer">

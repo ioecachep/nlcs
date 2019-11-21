@@ -140,3 +140,12 @@ input[type=button], input[type=submit], input[type=reset]  {
     transition-duration: 0.4s;
     cursor: pointer;
   }
+#logout {
+    background-color: red;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    width: 200px;
+  }

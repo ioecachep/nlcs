@@ -36,10 +36,11 @@ div#menu{
     border: 1px solid lightseagreen;
    }
 #menu ul :hover{
-    background: gold;
+    background: rgb(69, 114, 165);
 }
 li#selected{
-    background: gainsboro;
+    background: red;
+    color: white;
 }
 #thanbai{
     width: 83.5%;

@@ -66,7 +66,7 @@
                 </div>
             </div>
             <div id="footer">
-                <h3>(c) PHP</h3>
+                <h3 style="padding:1px; font-family: consolas">NLCS</h3>
             </div>
         </div>
     </div>

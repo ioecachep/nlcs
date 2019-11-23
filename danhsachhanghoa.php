@@ -29,7 +29,7 @@
             float: left;
             padding: 10px;
             margin: 10px;
-            /*border-radius: 10px;*/
+            border-radius: 5px;
         }
         div#ctsp:hover{
             box-shadow: 1px 1px 5px #808080;

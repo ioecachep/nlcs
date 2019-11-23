@@ -30,8 +30,8 @@
             width: 577px;
         }
         #chitiet{
-            height:544;
-            width: 596px;
+            height:676px;
+            width: 544px;
             overflow:scroll;
         }
         #chonngay{
